@@ -9,21 +9,13 @@ const venus = new Planet("Venus",0.62);
 const mars = new Planet("Mars",1.88);
 const jupiter = new Planet("Jupiter",11.86);
 
-export function ageOnMercury(age){
-  return age * 0.24
+export function ageOnPlanet(age, planet){
+  if (planet == "mercury"){return age * .24}
+  else if (planet == venus){return age * .62}
+  else if (planet == mars){return age * 1.88}
+  else {return age * 11.86}
 }
 
-export function ageOnVenus(age){
-  return age * 0.62
-}
-
-export function ageOnMars(age){
-  return age * 1.88
-}
-
-export function ageOnJupiter(age){
-  return age * 11.86
-}
 
 export function lifeExpectancy(age,planet){
   const usLifeExp = 78.69;
@@ -31,25 +23,25 @@ export function lifeExpectancy(age,planet){
 
   if (planet == "mercury"){
 
-    let planetAge = ageOnMercury(age)
+    let planetAge = ageOnPlanet(age,mercury)
     if (planetAge < yearsStillLeft){
     return `You still have ${usLifeExp - planetAge} years to live!`
     } else {
     return `You should have died ${planetAge - usLifeExp} years ago!`}
     } else if (planet == venus){
-    let planetAge = ageOnVenus(age)
+    let planetAge = ageOnPlanet(age,venus)
     if (planetAge < yearsStillLeft){
     return `You still have ${usLifeExp - planetAge} years to live!`
     } else {
     return `You should have died ${planetAge - usLifeExp} years ago!`}
-    } else if (planet == venus){
-    let planetAge = ageOnMars(age)
+  } else if (planet == mars){
+    let planetAge = ageOnPlanet(age,mars)
     if (planetAge < yearsStillLeft){
     return `You still have ${usLifeExp - planetAge} years to live!`
     } else {
     return `You should have died ${planetAge - usLifeExp} years ago!`}
     } else {
-    let planetAge = ageOnJupiter(age)
+    let planetAge = ageOnPlanet(age,jupiter)
     if (planetAge < yearsStillLeft){
     return `You still have ${usLifeExp - planetAge} years to live!`
     } else {

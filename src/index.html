@@ -1,13 +1,20 @@
 <div class="main-container">
   <div class="heading">
-    <h2>Find out your planetary age & life expectancy!</h2>
+    <h2>Find out your planetary age & life expectancy</h2>
   </div>
   <div class="input-area">
     <div class="date-input">
-      <input id="input" type="date"> What's your birthday?
+      <form action="/action_page.php">
+        Birth Year:<br>
+        <input id="birthYear" type="text" name="birthYear" value="">
+        <br>
+        Check box if you haven't already celebrated your birthday this year<br>
+        <input id = "birthDay" type="checkbox" name="birthDay" value="">
+      </form>
     </div>
     <div class="planet-selector">
-      <select>
+      <h5>What Planet are you on?</h5>
+      <select class="select">
         <option value="mercury">Mercury</option>
         <option value="venus">Venus</option>
         <option value="mars">Mars</option>
