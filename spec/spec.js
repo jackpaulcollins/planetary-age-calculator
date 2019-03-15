@@ -6,9 +6,24 @@ import { ageOnJupiter } from "./../src/backend.js"
 import { lifeExpectancy } from "./../src/backend.js"
 
 
-describe('Test', function() {
-  it('should add two numbers', function() {
-    let isFour = add(2,2)
-    expect(isFour).toEqual(4)
+describe('Ages', function() {
+  it('determine user ages for Mercury', function() {
+    let age = ageOnMercury(30)
+    expect(age).toEqual(50)
+  });
+
+  it('determine user ages for Venus', function() {
+    let age = ageOnVenus(30)
+    expect(age).toEqual(50)
+  });
+
+  it('determine user ages for Mars', function() {
+    let age = ageOnMars(30)
+    expect(age).toEqual(50)
+  });
+
+  it('determine user ages for Mercury', function() {
+    let age = ageOnJupiter(30)
+    expect(age).toEqual(50)
   });
 });
