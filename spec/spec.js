@@ -30,7 +30,7 @@ describe('Ages', function() {
 
 describe('Life Expectancy', function(){
   it('determines the users life expectancy based on a given planet', function(){
-    let lifeExp = lifeExpectancy(30,"mercury")
+    let lifeExp = lifeExpectancy(30,"jupiter")
     expect(lifeExp).toEqual(10)
   });
 });

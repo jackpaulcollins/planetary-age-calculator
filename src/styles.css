@@ -1,13 +1,23 @@
-
-.calendar{
-  margin: 300px auto 0 auto;
-  text-align: center;
+.main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+  width: 900px;
+  margin: 100px auto 0 auto;
+  border: solid blue 1px;
+  border-radius: 10px;
 }
 
-.output{
+.heading{
   text-align: center;
-  margin-top: 50px;
-  font-weight: bold;
-  font-family: cursive;
-  font-size: 100px;
+  height: 20%
+}
+
+
+
+.input-area{
+  display: flex;
+  justify-content: space-around;
+  width: 100%
 }
