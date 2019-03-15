@@ -22,7 +22,7 @@ $(document).ready(function(){
     }
     let planetChoice = $(".select").val();
 
-    $(".output").html(`You're ${userAge} here on earth. That means, on average, you have ${78.69 - userAge} here on Earth. Get to livin'!
+    $(".output").html(`You're ${userAge} here on earth. That means, on average, you have ${78.69 - userAge} years left! Better Get to livin'!
 
     In ${planetChoice} years you'd be ${ageOnPlanet(userAge,planetChoice)}, and ${lifeExpectancy(userAge,planetChoice)}`)
   })
