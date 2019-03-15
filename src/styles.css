@@ -1,0 +1,13 @@
+
+.calendar{
+  margin: 300px auto 0 auto;
+  text-align: center;
+}
+
+.output{
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 100px;
+}
