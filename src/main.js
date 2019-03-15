@@ -7,7 +7,7 @@ window.$ = $;
 import { Planet } from "./../src/backend.js"
 import { ageOnPlanet } from "./../src/backend.js"
 import { lifeExpectancy } from "./../src/backend.js"
-import { yearsLeft } from "./../src/backend.js"
+
 
 
 $(document).ready(function(){
@@ -21,9 +21,9 @@ $(document).ready(function(){
       userAge = userAge - 1
     }
     let planetChoice = $(".select").val();
-    let result = lifeExpectancy(userAge,planetChoice)
-    $(".output").html(`You're ${userAge} here on earth. That means, on average, you have ${yearsLeft(userAge)} here on Earth. Get to livin'!
 
-    If you were on ${planetChoice} you'd be ${ageOnPlanet(userAge,planetChoice)}, and ${result}`)
+    $(".output").html(`You're ${userAge} here on earth. That means, on average, you have ${78.69 - userAge} here on Earth. Get to livin'!
+
+    In ${planetChoice} years you'd be ${ageOnPlanet(userAge,planetChoice)}, and ${lifeExpectancy(userAge,planetChoice)}`)
   })
 })
