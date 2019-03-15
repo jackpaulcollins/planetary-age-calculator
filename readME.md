@@ -1,27 +1,37 @@
 ## Planning
 
 1. Configuration/dependencies
-  * This should include ALL dependencies.
-  * It should also include WHERE they are defined and used in the project
-  * It could include a short description of what each does for you
+  * Dependencies:
+
+  Production Dependencies:
+    "bootstrap": "^4.3.1", (frontend Framework, used for UI)
+    "jquery": "^3.3.1", (JS library to make DOM queries easy, used on main.js)
+    "popper.js": "^1.14.7", (bootstrap dependencies)
+    "webpack": "4.19.1" (bundler to reduce payload of project)
+
+  Development dependencies:
+    "clean-webpack-plugin": "^0.1.18", (Ensures the dist file doesn't get clutter, used in development)
+    "css-loader": "^0.28.10", (bundles styling with Webpack, used in dev)
+    "eslint": "^4.18.2", (checks code for errors and typos, used in dev)
+    "eslint-loader": "^2.0.0", (makes linter compatible with webpack)
+    "html-webpack-plugin": "^3.0.6", (bundles HTML, used in dev)
+    "jasmine": "^3.1.0", (allows user to write tests, used in dev)
+    "jasmine-core": "^2.99.0", (testing dependencies)
+    "karma": "^2.0.0", (virtual environment to run tests, used in dev)
+    "karma-chrome-launcher": "^2.2.0", (launches Karma virtual environment, used in dev)
+    "karma-cli": "^1.0.1", (configures Karm for terminal)
+    "karma-jasmine": "^1.1.1", (allows functionality between Karma and Jasmine)
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-jquery": "^0.2.2", (allows Karma to understand jQuery)
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.13",
+    "style-loader": "^0.20.2", (configures styling for webpack)
+    "uglifyjs-webpack-plugin": "^1.2.2", ("uglifies" code to reduce package size)
+    "webpack-cli": "^2.0.9", (configures webpack for terminal)
+    "webpack-dev-server": "^3.1.0" (creates a virtual enviroment & server to allow hot developement, used in dev)
+
 
 2. Specs
-  * Spec 1: Description, input, output.
-  * Spec 2: Description, input, output.
-
-3. Integration
-  * Initial routes or index pages with all dependencies in Controller/index.html head
-  * Template/html page for ...
-  * Template/html page for ...
-  * Template/html page for ... (one for each route/integrated user story)
-  * Display...
-  * Integrate feature that...
-
-4. UX/UI
-  * Include and modify bootstrap/materialize/Sass etc.
-  * Develop custom style
-
-5. Polish
-  * Refactor minor portion of...
-  * Delete unused...
-  * Make README awesome
+  * Spec 1: Determines in a user's age using their birthday, input: Dec. 8, 1988, output: "Age: 30"
+  * Spec 2: Determines a user's age relevant to several planets (Mercury, Venus, Mars, Jupiter), input: age = 30, output: "Your age on Mercury is 7.2 years old".
+  * Spec 3: Determines how many years a user would have left to live on each planet (using average life expectancy), input: age = 30, output: "On Jupiter, you're 355.8 years old! You should have died 277 years ago!"
